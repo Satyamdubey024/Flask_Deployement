@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <title>User List</title>
+</head>
+<body>
+    <h1>Users</h1>
+    <ul>
+        {% if users %}
+            {% for user in users %}
+                <li>{{ user[1] }}</li>
+            {% endfor %}
+        {% else %}
+            <li>No users found.</li>
+        {% endif %}
+    </ul>
+    <a href="/add">Add User</a>
+</body>
+</html>
